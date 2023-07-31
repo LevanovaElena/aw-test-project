@@ -1,0 +1,38 @@
+.button-icon {
+  width: 161px;
+  height: 30px;
+  border-radius: 4px;
+  border: 1px solid $gray-dark-opacity;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding:2px;
+  background-color: transparent;
+
+  .button-icon__img{
+    width: 14px;
+    margin-right: 3px;
+  }
+  .button-icon__caption{
+    @include font-bold($font-size: 12px,$font-color:$gray-dark);
+  }
+
+  &.button-icon_active {
+    border-color: $blue;
+    .button-icon__caption {
+      color: $blue;
+    }
+  }
+
+
+  @media (min-width: $media-md) {
+    width: 184px;
+    height: 34px;
+    .button-icon__img{
+      width: 18px;
+    }
+    .button-icon__caption {
+      font-size: 14px;
+    }
+  }
+}

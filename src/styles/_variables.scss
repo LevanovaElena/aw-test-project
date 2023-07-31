@@ -1,0 +1,26 @@
+//colors
+$white:#fff;
+$gray-light:#F8F9FA;
+$gray-mild:#EFF2F4;
+$gray-dark:#5B6373;
+$blue:#0168CA;
+
+//fonts
+@font-face {
+  font-family: "Mulish";
+  src: url("../fonts/mulish-bold/Mulish-ExtraBold.woff") format("woff"),
+  url("../fonts/mulish-bold/Mulish-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Mulish";
+  src: url("../fonts/mulish-regular/Mulish-Regular.woff") format("woff"),
+  url("../fonts/mulish-regular/Mulish-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+

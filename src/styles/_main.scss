@@ -1,0 +1,12 @@
+body {
+  @include font-normal($font-size: 14px,$font-color:$gray-dark);
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+h1 {
+  @include font-bold($font-size: 36px,$font-color:$gray-dark);
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

@@ -1,0 +1,12 @@
+@mixin font-bold($font-size,$font-color) {
+  font-family: 'Mulish',  sans-serif;
+  font-weight: 800;
+  font-size: $font-size;
+  color: $font-color;
+}
+@mixin font-normal($font-size,$font-color) {
+  font-family: 'Mulish',  sans-serif;
+  font-size: $font-size;
+  font-weight: 800;
+  color: $font-color;
+}

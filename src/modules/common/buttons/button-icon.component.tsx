@@ -1,8 +1,8 @@
 import React from "react";
 import {JSX} from "react";
 
-import LoadIcon from "../../images/load-icon.svg";
-import LoadIconActive from "../../images/load-icon-active.svg";
+import LoadIcon from "../../../images/load-icon.svg";
+import LoadIconActive from "../../../images/load-icon-active.svg";
 
 export declare type ButtonIconProps = {
     type: 'load',

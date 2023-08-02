@@ -1,4 +1,4 @@
-export declare type TimeLineItem={
+declare type TimeLineItem={
 
     departureTime: string,
     arrivalTime: string,

@@ -1,0 +1,61 @@
+.timeline-item {
+  display: grid;
+  grid-template-columns: 44px 1.7fr;
+  grid-template-rows: 44px 1fr;
+  gap: 4px 6px;
+  grid-auto-flow: column dense;
+  grid-template-areas:
+    "timeline-item__departure caption"
+    "timeline-item__departure description";
+}
+
+.timeline-item__departure {
+  grid-area: timeline-item__departure;
+  position: relative;
+  z-index: 1;
+  .vertical-line{
+    display: inline-block;
+    border-left: 2px dotted $blue;
+    margin: 0 50%;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    z-index: 0;
+  }
+}
+
+.caption {
+  grid-area: caption;
+  border-radius: 6px;
+  background: #FFF;
+  box-shadow: 5px 5px 35px 0 rgba(61, 71, 97, 0.15);
+  padding: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  .caption__plane{
+    background:center url("../images/plane-icon.svg")  no-repeat;
+    background-size: contain;
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+  }
+  .caption__name{
+    font-weight: 800;
+    font-size: 18px;
+    margin-right:20px ;
+  }
+  .caption__arrow{
+    background:center url("../images/chevron-right.svg")  no-repeat;
+    background-size: contain;
+    width: 8px;
+    height: 8px;
+    margin:0 5px;
+  }
+}
+
+.description {
+ // background-color: $gray-light;
+  grid-area: description;
+  z-index: 1;
+}

@@ -4,6 +4,8 @@ import {ButtonIcon} from "../common/buttons/button-icon.component";
 import {CardArrow} from "../common/cards/card-arrow.component";
 import {CardCode} from "../common/cards/card-code.component";
 import {CardDescription} from "../common/cards/card-description.component";
+import {TimeLineItem} from "../timeline-item/timeline-item.component";
+import {mockTimeLineItem, mockTimeLineItem2} from "../../__mocks__/timeLineItem";
 
 function App() {
     return (
@@ -29,7 +31,11 @@ function App() {
                 console.log("load");
             }} isActive={true} caption={'Load future itineraries'}/>
             <CardDescription
-                description={"Labore sed odit natus sit. Deleniti est labore at. Fugiat architecto itaque quidem possimus ipsam culpa. Tenetur cum sapiente eum facere. Blanditiis quam soluta aperiam eius nihil. Maiores eveniet tenetur doloribus."}/>
+                description={"Labore sed odit natus sit. Deleniti est labore at. Fugiat architecto itaque quidem possimus ipsam culpa. Tenetur cum sapiente eum facere. Blanditiis quam solu"}/>
+            
+            <p></p>
+            <TimeLineItem timeLineItem={mockTimeLineItem}/>
+            <TimeLineItem timeLineItem={mockTimeLineItem2}/>
         </div>
     );
 }

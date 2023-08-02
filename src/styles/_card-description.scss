@@ -1,24 +1,83 @@
-.card-description{
+.card-description {
   min-width: 232px;
-  max-height: 206px;
-  padding: 14px;
-  background: linear-gradient(180deg, #5C6373 67.71%, rgba(92, 99, 115, 0.00) 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  border-radius: 4px;
-  border: 1px solid $gray-mild;
-  font-size: 12px;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr 14px;
+  grid-template-rows: 14px 2.6fr;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "top-left corner"
+    "text text-right";
+}
+
+.card-description__text {
+  grid-area: text;
+  padding: 0 0 14px 14px;
+  border-bottom-left-radius: 4px;
+  border-bottom: 1px solid $gray-mild;
+  border-left: 1px solid $gray-mild;
   position: relative;
-  &::before {
-    content: "";
-    position: absolute;
-    top: -1%;
-    right: -0.3%;
-    width: 0;
-    height: 0;
-    border-bottom: 15px solid $gray;
-    border-right: 15px solid $white; /*Set to background color, not transparent!*/
-    border-radius: 0  0 0 4px ;
+  font-size: 12px;
+  background-color: $gray-light;
+  z-index:0 ;
+
+  .text{
+    z-index: 100;
+    position: relative;
+    &.card-description__text_gradient{
+      background: linear-gradient(180deg, #5C6373 67.71%, rgba(92, 99, 115, 0.00) 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    margin-bottom: 4px;
+  }
+  .card-description__btn{
+    color: $blue;
+    font-weight: 800;
+    position: relative;
+
+    &.card-description__btn_open{
+      &::after{
+        content: url("../images/chevron-down.svg");
+        position: absolute;
+        left: 100%;
+        transform: rotate(180deg);
+        margin-left: 4px;
+      }
+    }
+    &.card-description__btn_close{
+      &::after{
+        content: url("../images/chevron-down.svg");
+        position: absolute;
+        left: 100%;
+        margin-left: 4px;
+      }
+    }
   }
 }
+
+.top-left {
+  grid-area: top-left;
+  border-top-left-radius: 4px;
+  border-top: 1px solid $gray-mild;
+  border-left: 1px solid $gray-mild;
+  z-index: 100;
+  background-color: $gray-light;
+}
+
+.corner {
+  grid-area: corner;
+  border-bottom: 14px solid $gray;
+  border-right: 14px solid transparent;
+  border-radius: 0  0 0 4px ;
+}
+
+.text-right {
+  grid-area: text-right;
+  border-bottom-right-radius: 4px;
+  border-bottom: 1px solid $gray-mild;
+  border-right:  1px solid $gray-mild;
+  background-color: $gray-light;
+}
+

@@ -1,0 +1,24 @@
+.card-description{
+  min-width: 232px;
+  max-height: 206px;
+  padding: 14px;
+  background: linear-gradient(180deg, #5C6373 67.71%, rgba(92, 99, 115, 0.00) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-radius: 4px;
+  border: 1px solid $gray-mild;
+  font-size: 12px;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: -1%;
+    right: -0.3%;
+    width: 0;
+    height: 0;
+    border-bottom: 15px solid $gray;
+    border-right: 15px solid $white; /*Set to background color, not transparent!*/
+    border-radius: 0  0 0 4px ;
+  }
+}

@@ -7,6 +7,6 @@
 @mixin font-normal($font-size,$font-color) {
   font-family: 'Mulish',  sans-serif;
   font-size: $font-size;
-  font-weight: 800;
+  font-weight: 400;
   color: $font-color;
 }

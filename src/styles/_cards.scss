@@ -58,12 +58,52 @@
       margin-left: -5px;
     }
 
-    &.card-arrow_left ::before{
+    &.card-arrow_left::before{
       left: -4px;
       top:50%-8;
       width: 10px;
       height: 10px;
     }
 
+  }
+}
+
+.card-code{
+ height: 24px;
+  padding: 2px;
+
+  background-color: $blue;
+  float:left; overflow:hidden;
+    display: flex;
+
+  .card-code__text{
+    @include font-bold($font-size: 10px,$font-color:$white);
+    width: 35px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 5px;
+  }
+  .card-code__time{
+    @include font-normal($font-size: 8px,$font-color:$blue);
+    height: 24px;
+    width: 26px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    line-height: 1;
+    background-color: $white;
+
+  }
+  @media (min-width: $media-md) {
+    height: 28px;
+    .card-code__text {
+      font-size: 14px;
+      width: 43px;
+    }
+    .card-code__time {
+      width: 35px;
+      font-size: 10px;
+      padding: 2px;
+    }
   }
 }

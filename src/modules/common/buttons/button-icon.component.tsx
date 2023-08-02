@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import {JSX} from "react";
 
 import LoadIcon from "../../../images/load-icon.svg";
@@ -20,9 +20,11 @@ export const getIcon = (type: 'load', isActive?: boolean) => {
 
 }
 export const ButtonIcon = ({caption, type, onClick, isActive}: ButtonIconProps): JSX.Element => {
+    const [active,setActive]=useState(isActive);
+    useEffect(()=>{setActive(isActive)},[isActive])
     return (
-        <button className={`button-icon ${isActive ? 'button-icon_active' : ''}`} onClick={() => onClick()}>
-            {getIcon(type, isActive)}
+        <button className={`button-icon ${active ? 'button-icon_active' : ''}`} onClick={() => onClick()}>
+            {getIcon(type, active)}
             <div className='button-icon__caption'>{caption}</div>
         </button>
     );

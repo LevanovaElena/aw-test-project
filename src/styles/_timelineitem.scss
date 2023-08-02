@@ -4,6 +4,7 @@
   grid-template-rows: 44px 1fr;
   gap: 4px 6px;
   grid-auto-flow: column dense;
+  padding:  11px 0;
   grid-template-areas:
     "timeline-item__departure caption"
     "timeline-item__departure description";
@@ -13,15 +14,7 @@
   grid-area: timeline-item__departure;
   position: relative;
   z-index: 1;
-  .vertical-line{
-    display: inline-block;
-    border-left: 2px dotted $blue;
-    margin: 0 50%;
-    position: absolute;
-    top: 0;
-    height: 100%;
-    z-index: 0;
-  }
+
 }
 
 .caption {
@@ -38,12 +31,13 @@
     background-size: contain;
     width: 18px;
     height: 18px;
-    margin-right: 10px;
+    margin-right: 6px;
   }
   .caption__name{
+    max-width: 49px;
     font-weight: 800;
-    font-size: 18px;
-    margin-right:20px ;
+    font-size: 14px;
+    margin-right:20px;
   }
   .caption__arrow{
     background:center url("../images/chevron-right.svg")  no-repeat;
@@ -55,7 +49,42 @@
 }
 
 .description {
- // background-color: $gray-light;
   grid-area: description;
   z-index: 1;
+}
+
+.vertical-line{
+  display: inline-block;
+  border-left: 2px dotted $blue;
+  margin: 0 50%;
+  position: absolute;
+  top: 0;
+  height: 100%+14;
+  z-index: 0;
+}
+
+.load-button{
+  display: flex;
+  position: relative;
+  .vertical-line{
+    height: 100%+30;
+    top:0;
+    margin-left: 22px;
+    border-left: 2px dotted #fff;
+    background:linear-gradient( $white, $blue 90% ) border-box;
+  }
+  .load-button__button{
+    margin-left: 48px;
+  }
+  .load-button__line-down{
+    display: inline-block;
+    position: absolute;
+    height: 100%;
+    top:3px;
+
+    margin-left: 22px;
+    border-left: 2px dotted #fff;
+    background:linear-gradient($blue 40%, $white,  ) border-box;
+  }
+
 }

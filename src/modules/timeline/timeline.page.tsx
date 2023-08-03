@@ -3,10 +3,15 @@ import {TimeLineItem} from "../timeline-item/timeline-item.component";
 import {getUserTrips} from "./timeline.service";
 import LoadIcon from '../../images/load-icon.svg';
 import {ButtonIcon} from "../common/buttons/button-icon.component";
-import { v4 } from "uuid";
+import {v4} from "uuid";
+import {CardArrow} from "../common/cards/card-arrow.component";
 
-export const putUniqueId=(array:Trip[]):void =>{
-    array.forEach(item=>item._id=v4())
+export const putUniqueId = (array: Trip[]): void => {
+    array.forEach(item => {
+        item._id = v4();
+        if (item.id === '1') item.description = '';
+        if (item.id === '45') item.description = item.description + item.description+item.description;
+    })
 }
 export const TimelinePage = (): JSX.Element => {
     const [isLoaded, setIsLoaded] = useState(false);
@@ -58,9 +63,9 @@ export const TimelinePage = (): JSX.Element => {
     const load = (type: "up" | 'down') => {
         switch (type) {
             case 'up':
-                if(scrollView.current&&scrollView.current.scrollTop<3)setCurrentElement(document.getElementById(trips[0]._id));
+                if (scrollView.current && scrollView.current.scrollTop < 3) setCurrentElement(document.getElementById(trips[0]._id));
                 else setCurrentElement(null);
-                console.log(document.getElementById(trips[0]?._id),scrollView.current&&scrollView.current.scrollTop)
+                console.log(document.getElementById(trips[0]?._id), scrollView.current && scrollView.current.scrollTop)
                 setCurrentPageUp(prevState => {
                     getTrips(prevState - 1, 'up');
                     return prevState - 1
@@ -86,7 +91,10 @@ export const TimelinePage = (): JSX.Element => {
         );
     return (
         <div className="app">
-            <div className="page-title"></div>
+            <div className="page-title">
+                <h1>Your Trips</h1>
+                <CardArrow direction={'left'} text={trips.length.toString()} size={'sm'}/>
+            </div>
             <div className="load-button-up">
                 <div className='load-button'>
                     <div className='vertical-line'></div>

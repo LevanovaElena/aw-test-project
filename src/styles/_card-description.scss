@@ -31,12 +31,15 @@
       -webkit-text-fill-color: transparent;
     }
     margin-bottom: 4px;
+    @media (min-width: $media-md) {
+      font-size: 14px;
+    }
   }
   .card-description__btn{
     color: $blue;
     font-weight: 800;
     position: relative;
-
+    cursor: pointer;
     &.card-description__btn_open{
       &::after{
         content: url("../images/chevron-down.svg");

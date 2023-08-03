@@ -4,16 +4,18 @@
   height: 44px;
   border-radius: 4px;
   background: $blue;
-  padding: 9px;
   position: relative;
   z-index: 1;
-  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px;
+
   .button-icon__text{
     @include font-bold($font-size: 12px,$font-color:$white);
     text-transform: uppercase;
     vertical-align: center;
-    display: flex;
-    align-items: center;
     text-align: center;
     line-height: 1.1;
   }
@@ -41,10 +43,28 @@
     border: none;
     transform: rotate(45deg);
   }
+  &.card-arrow_size-sm{
+    width: 28px;
+    height: 28px;
+    .button-icon__text {
+      font-size: 14px;
+    }
+
+  }
+  &.card-arrow_left.card-arrow_size-sm ::before{
+    content: " ";
+    position: absolute;
+    left: -4px;
+    top:35%;
+    background-color: $blue;
+    width: 8px;
+    height: 8px;
+    border: none;
+    transform: rotate(45deg);
+  }
 
 
   @media (min-width: $media-md) {
-    padding: 16px;
     width: 60px;
     height: 60px;
    .button-icon__text{

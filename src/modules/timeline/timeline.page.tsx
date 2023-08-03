@@ -63,14 +63,14 @@ export const TimelinePage = (): JSX.Element => {
     const load = (type: "up" | 'down') => {
         switch (type) {
             case 'up':
-                if (scrollView.current && scrollView.current.scrollTop < 3) setCurrentElement(document.getElementById(trips[0]._id));
+/*                if (scrollView.current && scrollView.current.scrollTop < 3) setCurrentElement(document.getElementById(trips[0]._id));
                 else setCurrentElement(null);
-                console.log(document.getElementById(trips[0]?._id), scrollView.current && scrollView.current.scrollTop)
+                console.log(document.getElementById(trips[0]?._id), scrollView.current && scrollView.current.scrollTop)*/
                 setCurrentPageUp(prevState => {
                     getTrips(prevState - 1, 'up');
                     return prevState - 1
                 });
-                if (currentElement) currentElement.scrollIntoView({behavior: 'smooth'});
+                //if (currentElement) currentElement.scrollIntoView({behavior: 'smooth'});
                 break;
             case 'down':
                 setCurrentPageDown(prevState => {

@@ -94,14 +94,14 @@
   }
   .load-button__button{
     margin-left: 48px;
-    padding: 15px 0 5px 0;
+    padding: 10px 0 5px 0;
 
   }
   .load-button__line-down{
     display: inline-block;
     position: absolute;
     height: 100%;
-    top:3px;
+    top:2px;
     margin-left: 22px;
     border-left: 2px dotted #fff;
     background:linear-gradient($blue 40%, $white,  ) border-box;

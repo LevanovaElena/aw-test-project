@@ -66,6 +66,8 @@
 .load-button{
   display: flex;
   position: relative;
+  padding: 0 18px ;
+  height: 40px;
   .vertical-line{
     height: 100%+30;
     top:0;
@@ -81,7 +83,6 @@
     position: absolute;
     height: 100%;
     top:3px;
-
     margin-left: 22px;
     border-left: 2px dotted #fff;
     background:linear-gradient($blue 40%, $white,  ) border-box;

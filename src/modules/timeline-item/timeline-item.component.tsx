@@ -5,14 +5,13 @@ import {CardCode, getShortTime} from "../common/cards/card-code.component";
 
 
 export declare type TimeLineItemProps = {
-    timeLineItem: TimeLineItem;
+    timeLineItem: Trip;
 };
 
 export const TimeLineItem = ({timeLineItem}: TimeLineItemProps): JSX.Element | null => {
-
     const {description} = timeLineItem;
     return (
-        <div className="timeline-item">
+        <div className="timeline-item" id={timeLineItem._id}>
             <div className="timeline-item__departure">
                 <CardArrow direction={'right'} text={getShortTime(timeLineItem.arrivalTime)}/>
                 <span className="vertical-line"></span>

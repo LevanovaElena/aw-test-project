@@ -1,13 +1,10 @@
 import React, {JSX} from "react";
+import {getShortTime} from "../utils";
 
 export declare type CardCodeProps = {
     time?: string | null,
     code: string
 };
-export const getShortTime = (timeString: string): string => {
-    if (Number.isNaN(Date.parse(timeString))) return '00:00 AM';
-    return new Date(timeString).toLocaleString('en-US', {hour: 'numeric', minute: 'numeric', hour12: true});
-}
 export const CardCode = ({time, code}: CardCodeProps): JSX.Element => {
     return (
         <div className={`card-code`}>

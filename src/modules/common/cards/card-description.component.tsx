@@ -1,6 +1,6 @@
 import React, {JSX, useState} from "react";
 
-const MAX_COUNT_LETTERS_FOR_VIEW = 333;
+export const MAX_COUNT_LETTERS_FOR_VIEW = 333;
 
 export declare type CardDescriptionProps = {
     description: string
@@ -20,7 +20,7 @@ export const CardDescription = ({description}: CardDescriptionProps): JSX.Elemen
 
     if (!description) return null;
     return (
-        <div className="card-description">
+        <div className="card-description" data-testid={'description'}>
             <div className={`card-description__text`}>
                 <div className={`text ${bigText&&isOpen||!bigText?'':'card-description__text_gradient'}`}>{textResult}</div>
                 {bigText &&

@@ -25,7 +25,7 @@ export const ButtonIcon = ({caption, type, onClick, isActive}: ButtonIconProps):
         setActive(isActive)
     }, [isActive])
     return (
-        <button className={`button-icon ${active ? "" : 'button-icon_active'}`} onClick={() => onClick()}>
+        <button className={`button-icon ${active ? "" : 'button-icon_active'}`} onClick={() => !isActive&&onClick()} >
             {getIcon(type, active)}
             <div className='button-icon__caption'>{caption}</div>
         </button>

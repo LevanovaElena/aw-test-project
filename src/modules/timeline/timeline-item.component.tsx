@@ -1,7 +1,8 @@
 import React, {JSX} from "react";
 import {CardDescription} from "../common/cards/card-description.component";
 import {CardArrow} from "../common/cards/card-arrow.component";
-import {CardCode, getShortTime} from "../common/cards/card-code.component";
+import {CardCode} from "../common/cards/card-code.component";
+import {getShortTime} from "../common/utils";
 
 
 export declare type TimeLineItemProps = {

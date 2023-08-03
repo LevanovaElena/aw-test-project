@@ -1,5 +1,5 @@
 import React, {JSX, useEffect, useLayoutEffect, useRef, useState} from "react";
-import {TimeLineItem} from "../timeline-item/timeline-item.component";
+import {TimeLineItem} from "./timeline-item.component";
 import {getUserTrips} from "./timeline.service";
 import LoadIcon from '../../images/load-icon.svg';
 import {ButtonIcon} from "../common/buttons/button-icon.component";
@@ -10,7 +10,7 @@ export const putUniqueId = (array: Trip[]): void => {
     array.forEach(item => {
         item._id = v4();
         if (item.id === '1') item.description = '';
-        if (item.id === '45') item.description = item.description + item.description+item.description;
+        if (item.id === '45') item.description = item.description + item.description + item.description;
     })
 }
 export const TimelinePage = (): JSX.Element => {
@@ -56,16 +56,15 @@ export const TimelinePage = (): JSX.Element => {
             !type && setIsLoaded(true);
         }).catch(() => {
             type && type === 'up' ? setIsLoadedUp(false) : setIsLoadedDown(false);
-            setTrips([]);
         })
     }
 
     const load = (type: "up" | 'down') => {
         switch (type) {
             case 'up':
-/*                if (scrollView.current && scrollView.current.scrollTop < 3) setCurrentElement(document.getElementById(trips[0]._id));
-                else setCurrentElement(null);
-                console.log(document.getElementById(trips[0]?._id), scrollView.current && scrollView.current.scrollTop)*/
+                /*                if (scrollView.current && scrollView.current.scrollTop < 3) setCurrentElement(document.getElementById(trips[0]._id));
+                                else setCurrentElement(null);
+                                console.log(document.getElementById(trips[0]?._id), scrollView.current && scrollView.current.scrollTop)*/
                 setCurrentPageUp(prevState => {
                     getTrips(prevState - 1, 'up');
                     return prevState - 1

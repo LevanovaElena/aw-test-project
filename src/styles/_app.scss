@@ -18,7 +18,6 @@
     "trips-list"
     "load-button-down";
   }
-
 }
 
 .page-title {
@@ -27,18 +26,20 @@
   justify-content: flex-start;
   align-items: center;
   padding: 65px 0 0 48px;
-  h1{
+
+  h1 {
     display: block;
     margin-right: 12px;
     padding-bottom: 5px;
     font-size: 28px;
   }
+
   @media (min-width: $media-md) {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: 41px 62px;
-    h1{
+    padding: 41px 0 0 62px;
+    h1 {
       font-size: 36px;
     }
   }
@@ -53,7 +54,7 @@
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
-  overflow-y:auto;
+  overflow-y: auto;
   padding: 0 18px;
   @media (min-width: $media-md) {
     padding: 0 62px;
@@ -64,7 +65,7 @@
   grid-area: load-button-down;
 }
 
-.loader{
+.loader {
   display: block;
   margin: 50% auto;
 }

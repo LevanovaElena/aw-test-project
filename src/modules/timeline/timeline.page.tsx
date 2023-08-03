@@ -86,7 +86,7 @@ export const TimelinePage = (): JSX.Element => {
     if (!isLoaded)
         return (
             <div className="app">
-                <img src={LoadIcon} alt={'Loading...'}/>
+                <img src={LoadIcon} alt={'Loading...'} className='loader'/>
             </div>
         );
     return (

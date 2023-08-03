@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/aw-test-project/static/css/main.13536b9f.css",
+    "main.css": "/aw-test-project/static/css/main.d28b5616.css",
     "main.js": "/aw-test-project/static/js/main.b0f109d9.js",
     "static/js/787.a32f5158.chunk.js": "/aw-test-project/static/js/787.a32f5158.chunk.js",
     "static/media/Mulish-ExtraBold.ttf": "/aw-test-project/static/media/Mulish-ExtraBold.fe5fe634c4fb15a123ba.ttf",
@@ -13,12 +13,12 @@
     "static/media/chevron-down.svg": "/aw-test-project/static/media/chevron-down.a1d72f1722b251d2b340.svg",
     "static/media/load-icon-active.svg": "/aw-test-project/static/media/load-icon-active.b1a41930e3503ac1316d7be16a911fa9.svg",
     "static/media/plane-icon.svg": "/aw-test-project/static/media/plane-icon.f10e5ee1c1540d0f149f.svg",
-    "main.13536b9f.css.map": "/aw-test-project/static/css/main.13536b9f.css.map",
+    "main.d28b5616.css.map": "/aw-test-project/static/css/main.d28b5616.css.map",
     "main.b0f109d9.js.map": "/aw-test-project/static/js/main.b0f109d9.js.map",
     "787.a32f5158.chunk.js.map": "/aw-test-project/static/js/787.a32f5158.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.13536b9f.css",
+    "static/css/main.d28b5616.css",
     "static/js/main.b0f109d9.js"
   ]
 }
